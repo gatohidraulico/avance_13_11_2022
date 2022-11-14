@@ -1,0 +1,302 @@
+:root{
+    --background-green:rgb(139, 228, 87);
+    --orange: orange;
+    --black:#000000;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:2rem solid rbga(0,0,0,.1);
+    --outline:.1rem solid rbga(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+    --white:white;
+}
+
+*{
+    font-family: 'Cabin Condensed', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+    scroll-padding-top:7rem;
+}
+body{
+    background:var(--background-green);
+}
+img{
+    max-width: 100%;
+}
+section{
+    padding:2rem 9%;
+}
+.heading{
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size:4rem;
+    color:var(--black);
+}
+.heading span{
+    background: var(--orange);
+    color:var(--white);
+    display:inline-block;
+    padding:.5rem 3rem;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+.btn{
+    padding:.8rem 3rem;
+    font-size:1.7rem;
+    border-radius:.5rem;
+    border:.2rem solid var(--background-green);
+    color:var(--black);
+    cursor:pointer;
+    background: var(--orange);
+}
+.btn:hover{
+    background: var(--background-green);
+    color:var(--white);
+}
+/*Header section*/
+.header{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:2rem 9%;
+    background:rgb(30, 225, 30);;
+    box-shadow: var(--box-shadow);
+}
+.header .logo{
+    width: 15%;
+    padding:0 2rem;
+}
+.header .navbar a{
+    font-size:2rem;
+    margin:0 2rem;
+    color:var(--black);
+}
+.header .navbar a:hover{
+    color:var(--orange);
+}
+.header .icons div{
+    height:4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    border-radius:.5rem;
+    background:var(--orange);
+    color:var(--white);
+    font-size:2rem;
+    margin-right: .3rem;
+    cursor: pointer;
+    text-align:center;
+}
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+#menu-btn{
+    display:none;
+}
+/*Home section*/
+
+.home{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background: url('../img/main_photo.jpg');
+    background-position: center;
+    background-size: cover;
+    padding:25rem
+}
+.home .content{
+    text-align:center;
+    width:60rem;
+}
+.home .content h1{
+    font-size:5rem;
+    color:var(--white)
+}
+.home .content h1 span{
+    color:var(--orange) 
+}
+.home .content p{
+    font-size:1.7rem;
+    padding:1rem 0      ;
+    color:var(--white);
+    line-height: 2;
+}
+.paquetes .packeges-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(26rem,1fr));
+    gap:1.5rem;
+}
+.paquetes .packeges-container .box{
+    padding:3rem 2rem;
+    border-radius:3rem;
+    background:var(--orange);
+    box-shadow:var(--box-shadow);
+    outline:var(--outline);
+    outline-offset:-1rem;
+    text-align:center;
+}
+
+.paquetes .packeges-container .box .text-paquetes{
+    padding: 25% 25%;
+    text-align: center;
+    display: column;    
+}
+.paquetes .packeges-container .box .text-paquetes h3{
+    font-size: 5rem;
+    line-height: 1.8;
+}
+.paquetes .packeges-container .box .text-paquetes p{
+    font-size: 2rem;
+    color:var(--white);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+/**/
+.paquetes .box .product-slider{
+    padding: 15% 0;
+}
+.paquetes .box .product-slider .contenido{
+    background: green;
+    border-radius:.5rem;
+    padding:10rem;
+    outline-offset: -1rem;
+    outline:var(--outline);
+    box-shadow:var(--box-shadow);
+    transition: .2s linear;
+}
+.paquetes .box .product-slider .contenido p{
+    text-align: center;
+    padding:25% 50%;
+}
+/*Beneficios*/
+.beneficios .beneficios-slider{
+    padding:1rem;
+}
+.beneficios .beneficios-slider .box{
+    padding:2rem;
+    border-radius:5rem;
+    box-shadow: var(--box-shadow);
+    background: white;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    border:solid orange;
+}
+.beneficios .beneficios-slider .box:hover{
+    background: rgb(255, 204, 0);
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+    color:var(--white)
+}
+.beneficios .beneficios-slider .box p{
+    font-size:2.2rem;
+    line-height: 1.8;
+    font-weight: 500;
+}
+.atracciones .atracciones-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap:2rem;
+    align-items: center;
+}
+.atracciones .atracciones-container .text-atracciones h3{
+    font-size: 5rem;
+    color:white;
+    text-align: center;
+}
+.atracciones .atracciones-container .text-atracciones p{
+    font-size: 3rem;
+    color:#fff;
+    text-align: center;
+    line-height: 1.8;
+}
+/*Contacto*/
+.contacto h3{
+    font-size: 5rem;
+    color:white;
+    text-align: center;
+}
+.contacto i{
+    color:orange;
+}
+.contacto .contact-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    gap:2rem;
+    align-items: center;
+}
+.contacto .contact-container i {
+    font-size: 10rem;
+}
+.contacto .contact-container p{
+    font-size: 5rem;
+}
+/*Media queryes*/
+@media (max-width:991px){
+    html{
+      font-size:55%;
+  }
+  .header{
+      padding: 2rem;
+  }
+  section{
+      padding:2rem;
+  }
+}
+@media (max-width:768px){
+    .header .logo{
+        width: 25%;
+        padding:2rem 0;
+    }  
+    #menu-btn{
+      display:inline-block;
+  }
+  .header .navbar{
+      position:absolute;
+      top:110%; right:-110%;
+      width: 30rem;
+      box-shadow: var(--box-shadow);
+      border-radius: .5rem;
+      background: rgb(255, 192, 46);
+  }
+  .header .navbar.active{
+      right: 2rem;
+      transition: .4s linear;
+  }
+  .header .navbar a{
+      font-size: 2rem;
+      margin: 2rem 2.5rem;
+      display: block;
+  }
+  .paquetes .box .product-slider .contenido{
+    text-align: center;
+    padding:10rem 15rem;
+    outline:var(--outline);
+    box-shadow:var(--box-shadow);
+    transition: .2s linear;
+}
+
+}
+@media (max-width:450px){
+  html{
+      font-size:50%;
+  }
+  .heading{
+      font-size:2.5rem;
+  }
+  
+}
